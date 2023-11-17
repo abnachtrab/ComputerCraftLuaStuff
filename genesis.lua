@@ -1,10 +1,10 @@
 local minFuel = 100
 local rowLength = 6
 local numRows = 1  --- Note: One row == two crops on each side
----   T = Turtle (with a fuel chest under it)
+---   T = Turtle (with a fuel chest under it, optionally waterlogged)
 ---   C = Chest
 ---   P = Plant (with air above it)
----   O = Air
+---   O = Air (Optionally, with water below)
 ---   Example with rowLength=6 and numRows=2
 ---   PPPPPP
 ---   OOOOOTC
