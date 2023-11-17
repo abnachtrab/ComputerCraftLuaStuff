@@ -17,12 +17,12 @@ while true do
         turtle.dropUp()
     end
     turtle.up()
-    for i = 1, 8 do
-        for j = 1, i do
+    for j = 1, 8 do
+        for k = 1, j do
             turtle.forward()
         end
         turtle.turnRight()
-        for j = 1, i do
+        for l = 1, j do
             turtle.forward()
         end
         turtle.turnRight()
