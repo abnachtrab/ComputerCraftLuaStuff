@@ -18,6 +18,7 @@ local hand = peripheral.find("weakAutomata")
 if not hand then
     print("Please attach a Weak Automata Core from Advanced Peripherals!")
 else
+    hand.setFuelConsumptionRate(2)
     while true do
         if turtle.getFuelLevel() <= turtle.getFuelLimit() then
             turtle.select(1)
@@ -35,7 +36,10 @@ else
         turtle.turnLeft()
         for i = 1, numRows do
             for j = 1, rowLength do
-                hand.useOnBlock()
+                local worked = false
+                repeat
+                    worked = hand.useOnBlock()
+                until worked
                 turtle.suck()
                 turtle.turnLeft()
                 turtle.forward()
@@ -44,7 +48,10 @@ else
             turtle.turnLeft()
             turtle.turnLeft()
             for j = 1, rowLength do
-                hand.useOnBlock()
+                local worked = false
+                repeat
+                    worked = hand.useOnBlock()
+                until worked
                 turtle.suck()
                 turtle.turnLeft()
                 turtle.forward()
