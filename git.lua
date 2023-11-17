@@ -28,10 +28,10 @@ end
 if not exit then
     local response = http.get(url)
     if response then
-            local responseBody = response.readAll()
-            response.close()
+        local responseBody = response.readAll()
+        response.close()
     	local file = fs.open(url:match("/([^/]+)$") or "output.txt", "w")
-    	file.write(data)
+    	file.write(responseBody)
         file.close()
     else
         print("Error: Unable to connect to URL")
