@@ -1,4 +1,5 @@
 local minFuel = 100
+print("Current Fuel Level: "..turtle.getFuelLevel())
 while true do
     if turtle.getFuelLevel() < minFuel then
         print("Out of fuel! Please place me on a chest with fuel inside!")
