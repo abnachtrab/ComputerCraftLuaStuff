@@ -65,7 +65,7 @@ else
                 turtle.down()
                 turtle.turnLeft()
                 turtle.turnLeft()
-            elseif i > 1 then
+            elseif numRows > 1 then
                 turtle.turnLeft()
                 turtle.turnLeft()
                 turtle.up()
