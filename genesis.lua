@@ -1,5 +1,5 @@
 local minFuel = 100
-print("Current Fuel Level: "..turtle.getFuelLevel())
+print("Fuel: "..turtle.getFuelLevel().."/"..turtle.getFuelLimit())
 while true do
     for i = 1, 16 do
         turtle.select(i)
