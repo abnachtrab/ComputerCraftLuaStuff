@@ -65,7 +65,7 @@ else
                 turtle.down()
                 turtle.turnLeft()
                 turtle.turnLeft()
-            else
+            elseif i > 1 then
                 turtle.turnLeft()
                 turtle.turnLeft()
                 turtle.up()
@@ -74,6 +74,8 @@ else
                 end
                 turtle.down()
                 turtle.turnRight()
+            else
+                turtle.turnLeft()
             end
         end
         for i = 1, 16 do
