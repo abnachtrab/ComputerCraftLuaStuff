@@ -21,7 +21,7 @@ else
     while true do
         print("Fuel: "..turtle.getFuelLevel().."/"..turtle.getFuelLimit())
         if turtle.getFuelLevel() <= turtle.getFuelLimit() then
-            turtle.select(1)
+            turtle.select(15)
             local canSuck = true
             repeat
                 canSuck = turtle.suckDown()
