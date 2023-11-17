@@ -32,7 +32,7 @@ else
         if turtle.getFuelLevel() < minFuel then
             print("Out of fuel!")
             break
-        end2
+        end
         turtle.turnLeft()
         turtle.select(16)
         for i = 1, numRows do
