@@ -1,4 +1,9 @@
+local minFuel = 100
 while true do
+    if turtle.getFuelLevel() < minFuel then
+        print("Out of fuel! Please place me on a chest with fuel inside!")
+        break
+    end
     for i = 1, 16 do
         turtle.select(i)
         if not turtle.refuel(0) or turtle.getFuelLevel() >= turtle.getFuelLimit() then
