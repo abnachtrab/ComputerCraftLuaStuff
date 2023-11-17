@@ -22,7 +22,6 @@ while true do
         print("Out of fuel! Please place me on a chest with fuel inside!")
         break
     end
-    turtle.up()
     for j = 1, 8 do
         for k = 1, j do
             turtle.forward()
@@ -33,5 +32,4 @@ while true do
         end
         turtle.turnRight()
     end
-    turtle.down()
 end
