@@ -13,13 +13,13 @@ local numRows = 1  --- Note: One row == two crops on each side
 ---   OOOOOO
 ---   PPPPPP
 ---
-print("Fuel: "..turtle.getFuelLevel().."/"..turtle.getFuelLimit())
 local hand = peripheral.find("weakAutomata")
 if not hand then
     print("Please attach a Weak Automata Core from Advanced Peripherals!")
 else
     hand.setFuelConsumptionRate(2)
     while true do
+        print("Fuel: "..turtle.getFuelLevel().."/"..turtle.getFuelLimit())
         if turtle.getFuelLevel() <= turtle.getFuelLimit() then
             turtle.select(1)
             local canSuck = true
@@ -32,8 +32,9 @@ else
         if turtle.getFuelLevel() < minFuel then
             print("Out of fuel!")
             break
-        end
+        end2
         turtle.turnLeft()
+        turtle.select(16)
         for i = 1, numRows do
             for j = 1, rowLength-1 do
                 local worked = false
@@ -78,7 +79,7 @@ else
                 turtle.turnLeft()
             end
         end
-        for i = 1, 16 do
+        for i = 1, 15 do
             turtle.select(i)
             if not turtle.refuel(0) or turtle.getFuelLevel() >= turtle.getFuelLimit() then
                 turtle.drop()
