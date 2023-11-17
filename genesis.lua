@@ -35,7 +35,7 @@ else
         end
         turtle.turnLeft()
         for i = 1, numRows do
-            for j = 1, rowLength do
+            for j = 1, rowLength-1 do
                 local worked = false
                 repeat
                     worked = hand.useOnBlock()
@@ -47,7 +47,7 @@ else
             end
             turtle.turnLeft()
             turtle.turnLeft()
-            for j = 1, rowLength do
+            for j = 1, rowLength-1 do
                 local worked = false
                 repeat
                     worked = hand.useOnBlock()
