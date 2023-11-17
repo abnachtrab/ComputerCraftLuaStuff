@@ -4,19 +4,20 @@ while true do
     for i = 1, 16 do
         turtle.select(i)
         if not turtle.refuel(0) or turtle.getFuelLevel() >= turtle.getFuelLimit() then
-            turtle.dropUp()
+            turtle.dropDown()
         else
             turtle.refuel()
-            turtle.dropUp()
+            turtle.dropDown()
         end
     end
     if turtle.getFuelLevel() <= turtle.getFuelLimit() then
         turtle.select(1)
+        local canSuck = true
         repeat
-            turtle.suckDown()
+            canSuck = turtle.suckUp()
             turtle.refuel()
-        until not turtle.suckUp() or turtle.getFuelLevel() >= turtle.getFuelLimit()
-        turtle.dropDown()
+        until not canSuck or turtle.getFuelLevel() >= turtle.getFuelLimit()
+        turtle.dropUp()
     end
     if turtle.getFuelLevel() < minFuel then
         print("Out of fuel! Please place me on a chest with fuel inside!")
